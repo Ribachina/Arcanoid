@@ -1,7 +1,10 @@
 #pragma once
-
 #include <SFML/Graphics.hpp>
-#include "Arcanoid.hpp"
+#include <memory>
+#include "GameStateData.hpp"
+#include "MainMenuStateData.hpp"
+#include "PlayingStateData.hpp"
+#include "VictoryStateData.hpp"
 
 class Game
 {
@@ -12,14 +15,13 @@ public:
 
 private:
 	sf::RenderWindow window;
+	const sf::Font font;
+	std::unique_ptr<GameStateData> currentState;
 
-	Board board;
-	Platform platform;
-	Ball ball;
-
-	MoveDirection GetMoveDirection() const; // Определяем направление движения платформы по состоянию клавиш <-  ->
+	
 
 	void Input(); // События окна и команда игрока (запустить шар)
 	void Update(float deltaTime); // Обновляем состояние объектов
 	void Draw(); // Очищаем и рисуем объекты игры
+	void ChangeState(GameStateType type); // Создаёт новое состояние и делает его текущимм
 };
