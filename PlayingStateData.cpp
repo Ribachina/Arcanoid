@@ -1,22 +1,21 @@
 #include "PlayingStateData.hpp"
 
 PlayingStateData::PlayingStateData()
-	:board(sf::Vector2f{ 0.f, 0.f }, sf::Vector2f{ GameConfig::WINDOW_WIDTH, GameConfig::WINDOW_HEIGHT }),
-	platform(sf::Vector2f{ 375.f, 580.f }, sf::Vector2f{ 100.f, 10.f }, 500.f),
-	ball(sf::Vector2f{ 395.f, 540.f }, sf::Vector2f{ 500.f, -500.f }, 10.f)
+	:m_board(sf::Vector2f{ 0.f, 0.f }, sf::Vector2f{ GameConfig::WINDOW_WIDTH, GameConfig::WINDOW_HEIGHT }),
+	m_platform(PLATFORM_POSITION, PLATFORM_SIZE, PLATFROM_SPEED),
+	m_ball(BALL_POSTION, BALL_VELOCITY, BALL_RADIUS)
 {
 }
 
 void PlayingStateData::Init()
 {
-	blocks.clear();
-	blocks.reserve(10);
-	for (int i = 0; i < 10; ++i)
+	m_blocks.clear();
+	m_blocks.reserve(BLOCK_COUNT);
+	for (int i = 0; i < BLOCK_COUNT; ++i)
 	{
-		const float x = 50.f + i * 70.f;
-		const float y = 50.f;
+		const float x = BLOCK_START_X + i * BLOCK_STEP_X;
 
-		blocks.push_back(std::make_unique<Block>(sf::Vector2f{ x, y }, sf::Vector2f{ 60.f, 20.f }));
+		m_blocks.push_back(std::make_unique<Block>(sf::Vector2f{ x, BLOCK_START_Y }, BLOCK_SIZE));
 	}
 }
 
@@ -26,7 +25,7 @@ void PlayingStateData::HandleWindowEvent(const sf::Event& event)
 	{
 		if (keyPressed->code == sf::Keyboard::Key::Space)
 		{
-			ball.Launch();
+			m_ball.Launch();
 		}
 	}
 }
@@ -49,31 +48,31 @@ void PlayingStateData::Update(float deltaTime)
 {
 	const MoveDirection direction = GetMoveDirection();
 
-	platform.Update(board, deltaTime, direction);
-	ball.AttachTo(platform.GetBounds());
-	ball.Update(board, deltaTime);
-	if (IsCollision(platform.GetBounds(), ball.GetBounds()))
+	m_platform.Update(m_board, deltaTime, direction);
+	m_ball.AttachTo(m_platform.GetBounds());
+	m_ball.Update(m_board, deltaTime);
+	if (IsCollision(m_platform.GetBounds(), m_ball.GetBounds()))
 	{
-		ball.BounceFromPlatform();
+		m_ball.BounceFromPlatform();
 	}
 
-	const sf::FloatRect ballBounds = ball.GetBounds();
-	const sf::FloatRect boardBounds = board.GetBounds();
+	const sf::FloatRect ballBounds = m_ball.GetBounds();
+	const sf::FloatRect boardBounds = m_board.GetBounds();
 
 	const float ballBottom = ballBounds.position.y + ballBounds.size.y;
 	const float boardBottom = boardBounds.position.y + boardBounds.size.y;
 	if (ballBottom >= boardBottom)
 	{
-		ball.Reset();
-		ball.AttachTo(platform.GetBounds());
+		m_ball.Reset();
+		m_ball.AttachTo(m_platform.GetBounds());
 	}
 
-	for (auto it = blocks.begin(); it != blocks.end();)
+	for (auto it = m_blocks.begin(); it != m_blocks.end();)
 	{
-		if (IsCollision(ball.GetBounds(), (*it)->GetBounds()))
+		if (IsCollision(m_ball.GetBounds(), (*it)->GetBounds()))
 		{
-			ball.BounceFromBlock();
-			it = blocks.erase(it);
+			m_ball.BounceFromBlock();
+			it = m_blocks.erase(it);
 		}
 		else
 		{
@@ -81,7 +80,7 @@ void PlayingStateData::Update(float deltaTime)
 		}
 	}
 
-	if (blocks.empty())
+	if (m_blocks.empty())
 	{
 		RequestState(GameStateType::Victory);
 	}
@@ -89,10 +88,10 @@ void PlayingStateData::Update(float deltaTime)
 
 void PlayingStateData::Draw(sf::RenderWindow& window)
 {
-	board.DrawBoard(window);
-	platform.DrawPlatform(window);
-	ball.DrawBall(window);
-	for (const auto& block : blocks)
+	m_board.DrawBoard(window);
+	m_platform.DrawPlatform(window);
+	m_ball.DrawBall(window);
+	for (const auto& block : m_blocks)
 	{
 		block->Draw(window);
 	}

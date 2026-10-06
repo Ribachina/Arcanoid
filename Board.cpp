@@ -1,18 +1,18 @@
 #include "Board.hpp"
 
 Board::Board(sf::Vector2f position, sf::Vector2f size)
-: rectangle(size)
+: m_rectangle(size)
 {
-	rectangle.setPosition(position);
-	rectangle.setFillColor(sf::Color::Black);
+	m_rectangle.setPosition(position);
+	m_rectangle.setFillColor(sf::Color::Black);
 }
 
 void Board::DrawBoard(sf::RenderWindow& window) const
 {
-	window.draw(rectangle);
+	window.draw(m_rectangle);
 }
 
 sf::FloatRect Board::GetBounds() const
 {
-	return rectangle.getGlobalBounds();
+	return m_rectangle.getGlobalBounds();
 }

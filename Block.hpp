@@ -9,15 +9,15 @@ class Block : public GameObject
 public:
 	// Создаём блок с позицей и размером
 	Block(sf::Vector2f position, sf::Vector2f size)
-		: rectangle(size)
+		: m_rectangle(size)
 	{
-		rectangle.setPosition(position);
-		rectangle.setFillColor(sf::Color::White);
+		m_rectangle.setPosition(position);
+		m_rectangle.setFillColor(sf::Color::White);
 	}
 
 	void Draw(sf::RenderWindow& window) const override;
 	sf::FloatRect GetBounds() const override;
 
 private:
-	sf::RectangleShape rectangle;
+	sf::RectangleShape m_rectangle;
 };

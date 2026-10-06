@@ -19,11 +19,11 @@ public:
 	sf::FloatRect GetBounds() const; // Вовращаем глобальные границы шара
 
 private:
-	sf::CircleShape circle;
-	sf::Vector2f initialVelocity;
-	sf::Vector2f velocity;
+	sf::CircleShape m_circle;
+	sf::Vector2f m_initialVelocity;
+	sf::Vector2f m_velocity;
 
-	bool launched = false;
+	bool m_launched = false;
 
 
 	void Move(float deltaTime); // Перемещаем шар

@@ -15,6 +15,6 @@ public:
 	void Draw(sf::RenderWindow& window) override;
 
 private:
-	sf::Text title;
-	sf::Text question;
+	sf::Text m_title;
+	sf::Text m_question;
 };

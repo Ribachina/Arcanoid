@@ -22,8 +22,8 @@ public:
 	sf::FloatRect GetBounds() const; // Вовращаем глобальные границы платформы
 
 private:
-	sf::RectangleShape rectangle;
-	float speed;
+	sf::RectangleShape m_rectangle;
+	float m_speed;
 
 	void Move(float deltaTime, MoveDirection direction); // Перемещаем платформу в выбранном направлении
 	void CollisionWithWall(const Board& board); // Не позволяем платформе выйти за границы поля

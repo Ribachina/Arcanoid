@@ -14,9 +14,9 @@ public:
 	void Run(); // Главный игровой цикл
 
 private:
-	sf::RenderWindow window;
-	const sf::Font font;
-	std::unique_ptr<GameStateData> currentState;
+	sf::RenderWindow m_window;
+	const sf::Font m_font;
+	std::unique_ptr<GameStateData> m_currentState;
 
 	
 

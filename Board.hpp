@@ -13,5 +13,5 @@ public:
 	sf::FloatRect GetBounds() const; // ¬овращаем глобальные границы игрового пол€
 
 private:
-	sf::RectangleShape rectangle;
+	sf::RectangleShape m_rectangle;
 };

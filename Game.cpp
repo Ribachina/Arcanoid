@@ -2,8 +2,8 @@
 #include "GameConfig.hpp"
 
 Game::Game()
-	: window(sf::VideoMode({ GameConfig::WINDOW_WIDTH, GameConfig::WINDOW_HEIGHT }), "Arcanoid"),
-	font ("Resources/Fonts/PB Pixel.ttf")
+	: m_window(sf::VideoMode({ GameConfig::WINDOW_WIDTH, GameConfig::WINDOW_HEIGHT }), "Arcanoid"),
+	m_font ("Resources/Fonts/PB Pixel.ttf")
 {
 	ChangeState(GameStateType::MainMenu);
 }
@@ -14,7 +14,7 @@ void Game::Run()
 	sf::Clock clock;
 	float lastTime = clock.getElapsedTime().asSeconds();
 
-	while (window.isOpen())
+	while (m_window.isOpen())
 	{
 		float currentTime = clock.getElapsedTime().asSeconds();
 		float deltaTime = currentTime - lastTime;
@@ -28,22 +28,22 @@ void Game::Run()
 
 void Game::Input()
 {
-	while (const std::optional event = window.pollEvent())
+	while (const std::optional event = m_window.pollEvent())
 	{
 		if (event->is<sf::Event::Closed>())
 		{
-			window.close();
+			m_window.close();
 		}
 
-		currentState->HandleWindowEvent(*event);
+		m_currentState->HandleWindowEvent(*event);
 	}
 }
 
 void Game::Update(float deltaTime)
 {
-	currentState->Update(deltaTime);
+	m_currentState->Update(deltaTime);
 	
-	const GameStateType requestedState = currentState->GetRequestedState();
+	const GameStateType requestedState = m_currentState->GetRequestedState();
 	if (requestedState != GameStateType::None)
 	{
 		ChangeState(requestedState);
@@ -55,27 +55,27 @@ void Game::ChangeState(GameStateType type)
 	switch (type)
 	{
 	case GameStateType::MainMenu:
-		currentState = std::make_unique<MainMenuStateData>(font);
+		m_currentState = std::make_unique<MainMenuStateData>(m_font);
 		break;
 	
 	case GameStateType::Playing:
-		currentState = std::make_unique < PlayingStateData>();
+		m_currentState = std::make_unique < PlayingStateData>();
 		break;
 
 	case GameStateType::Victory:
-		currentState = std::make_unique < VictoryStateData>(font);
+		m_currentState = std::make_unique < VictoryStateData>(m_font);
 		break;
 
 	case GameStateType::None:
 		return;
 	}
 
-	currentState->Init();
+	m_currentState->Init();
 }
 
 void Game::Draw()
 {
-	window.clear();
-	currentState->Draw(window);
-	window.display();
+	m_window.clear();
+	m_currentState->Draw(m_window);
+	m_window.display();
 }

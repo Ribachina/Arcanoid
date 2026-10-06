@@ -1,18 +1,18 @@
 #include "VictoryStateData.hpp"
 
 VictoryStateData::VictoryStateData(const sf::Font& font)
-	:title(font, "YOU WIN", 80),
-	question(font, "Restart?\nPress Y/N", 40)
+	:m_title(font, "YOU WIN", 80),
+	m_question(font, "Restart?\nPress Y/N", 40)
 {
 }
 
 void VictoryStateData::Init()
 {
-	title.setFillColor(sf::Color::Green);
-	title.setPosition(sf::Vector2f{ GameConfig::GetCenteredTextX(title), 140.f});
+	m_title.setFillColor(sf::Color::Green);
+	m_title.setPosition(sf::Vector2f{ GameConfig::GetCenteredTextX(m_title), 140.f});
 	
-	question.setFillColor(sf::Color::White);
-	question.setPosition(sf::Vector2f{ GameConfig::GetCenteredTextX(question), 280.f });
+	m_question.setFillColor(sf::Color::White);
+	m_question.setPosition(sf::Vector2f{ GameConfig::GetCenteredTextX(m_question), 280.f });
 }
 
 void VictoryStateData::HandleWindowEvent(const sf::Event& event)
@@ -36,6 +36,6 @@ void VictoryStateData::Update(float deltaTime)
 
 void VictoryStateData::Draw(sf::RenderWindow& window)
 {
-	window.draw(title);
-	window.draw(question);
+	window.draw(m_title);
+	window.draw(m_question);
 }

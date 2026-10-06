@@ -1,17 +1,17 @@
 #include "Ball.hpp"
 
 Ball::Ball(sf::Vector2f position, sf::Vector2f initialVelocity, float radius)
-	: initialVelocity(initialVelocity),
-	velocity(initialVelocity)
+	: m_initialVelocity(initialVelocity),
+	m_velocity(initialVelocity)
 {
-	circle.setPosition(position);
-	circle.setRadius(radius);
-	circle.setFillColor(sf::Color::White);
+	m_circle.setPosition(position);
+	m_circle.setRadius(radius);
+	m_circle.setFillColor(sf::Color::White);
 }
 
 void Ball::Update(const Board& board, float deltaTime)
 {
-	if (launched)
+	if (m_launched)
 	{
 		Move(deltaTime);
 		CollisionWithWall(board);
@@ -20,9 +20,9 @@ void Ball::Update(const Board& board, float deltaTime)
 
 void Ball::Move(float deltaTime)
 {
-	const sf::Vector2f offset = velocity * deltaTime;
+	const sf::Vector2f offset = m_velocity * deltaTime;
 
-	circle.move(offset);
+	m_circle.move(offset);
 }
 
 void Ball::CollisionWithWall(const Board& board)
@@ -40,40 +40,40 @@ void Ball::CollisionWithWall(const Board& board)
 	const float boardTop = boardBounds.position.y;
 	//float  boardBottom = boardBounds.position.y + boardBounds.size.y;
 
-	const float currentX = circle.getPosition().x;
-	const float currentY = circle.getPosition().y;
+	const float currentX = m_circle.getPosition().x;
+	const float currentY = m_circle.getPosition().y;
 
 	if (ballLeft <= boardLeft)
 	{
-		circle.setPosition(sf::Vector2f{ boardLeft, currentY });
-		velocity.x = -velocity.x;
+		m_circle.setPosition(sf::Vector2f{ boardLeft, currentY });
+		m_velocity.x = -m_velocity.x;
 	}
 	else if (ballRight >= boardRight)
 	{
 		const float newX = boardRight - ballBounds.size.x;
-		circle.setPosition(sf::Vector2f{ newX, currentY });
-		velocity.x = -velocity.x;
+		m_circle.setPosition(sf::Vector2f{ newX, currentY });
+		m_velocity.x = -m_velocity.x;
 	}
 	else if (ballTop <= boardTop)
 	{
-		circle.setPosition(sf::Vector2f{ currentX, boardTop });
-		velocity.y = -velocity.y;
+		m_circle.setPosition(sf::Vector2f{ currentX, boardTop });
+		m_velocity.y = -m_velocity.y;
 	}
 }
 
 void Ball::DrawBall(sf::RenderWindow& window) const
 {
-	window.draw(circle);
+	window.draw(m_circle);
 }
 
 void Ball::Launch()
 {
-	launched = true;
+	m_launched = true;
 }
 
 void Ball::AttachTo(const sf::FloatRect& platformBounds)
 {
-	if (!launched)
+	if (!m_launched)
 	{
 		const sf::FloatRect ballBounds = GetBounds();
 
@@ -87,31 +87,31 @@ void Ball::AttachTo(const sf::FloatRect& platformBounds)
 		const float ballX = platformLeft + (platformWidth - ballWidth) / 2;
 		const float ballY = platformTop - ballHeight;
 
-		circle.setPosition(sf::Vector2f{ ballX, ballY });
+		m_circle.setPosition(sf::Vector2f{ ballX, ballY });
 	}
 }
 
 void Ball::BounceFromPlatform()
 {
-	if (velocity.y > 0)
+	if (m_velocity.y > 0)
 	{
-		velocity.y = -velocity.y;
+		m_velocity.y = -m_velocity.y;
 	}
 }
 
 void Ball::BounceFromBlock()
 {
-	velocity.y = -velocity.y;
+	m_velocity.y = -m_velocity.y;
 }
 
 void Ball::Reset()
 {
-	launched = false;
-	velocity = initialVelocity;
+	m_launched = false;
+	m_velocity = m_initialVelocity;
 }
 
 sf::FloatRect Ball::GetBounds() const
 {
 
-	return circle.getGlobalBounds();
+	return m_circle.getGlobalBounds();
 }

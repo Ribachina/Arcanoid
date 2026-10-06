@@ -2,12 +2,12 @@
 
 void Block::Draw(sf::RenderWindow& window) const
 {
-	window.draw(rectangle);
+	window.draw(m_rectangle);
 }
 
 sf::FloatRect Block::GetBounds() const
 {
-	return rectangle.getGlobalBounds();
+	return m_rectangle.getGlobalBounds();
 }
 
 
