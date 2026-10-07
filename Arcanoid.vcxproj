@@ -130,10 +130,13 @@
     <ClCompile Include="Block.cpp" />
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="DurableBlock.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameConfig.hpp" />
     <ClCompile Include="GameMain.cpp" />
     <ClCompile Include="GameStateType.hpp" />
+    <ClCompile Include="GlassBlock.cpp" />
+    <ClCompile Include="GlassBlock.hpp" />
     <ClCompile Include="MainMenuStateData.cpp" />
     <ClCompile Include="Platform.cpp" />
     <ClCompile Include="PlayingStateData.cpp" />
@@ -144,9 +147,11 @@
     <ClInclude Include="Ball.hpp" />
     <ClInclude Include="Block.hpp" />
     <ClInclude Include="Board.hpp" />
+    <ClInclude Include="Collidable.hpp" />
     <ClInclude Include="Collision.hpp" />
+    <ClInclude Include="Drawable.hpp" />
+    <ClInclude Include="DurableBlock.hpp" />
     <ClInclude Include="Game.hpp" />
-    <ClInclude Include="GameObject.hpp" />
     <ClInclude Include="GameStateData.hpp" />
     <ClInclude Include="MainMenuStateData.hpp" />
     <ClInclude Include="Platform.hpp" />

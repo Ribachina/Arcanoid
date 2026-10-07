@@ -1,4 +1,4 @@
-#include "Collision.hpp"
+ #include "Collision.hpp"
 
 bool IsCollision(const sf::FloatRect& first, const sf::FloatRect& second)
 {

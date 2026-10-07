@@ -1,4 +1,6 @@
 #include "Ball.hpp"
+#include <algorithm>
+#include <cmath>
 
 Ball::Ball(sf::Vector2f position, sf::Vector2f initialVelocity, float radius)
 	: m_initialVelocity(initialVelocity),
@@ -99,9 +101,58 @@ void Ball::BounceFromPlatform()
 	}
 }
 
-void Ball::BounceFromBlock()
+void Ball::BounceFromBlock(const sf::FloatRect& blockBounds)
 {
-	m_velocity.y = -m_velocity.y;
+	const sf::FloatRect ballBounds = GetBounds();
+
+	const float ballLeft = ballBounds.position.x;
+	const float ballRight = ballBounds.position.x + ballBounds.size.x;
+	const float ballTop = ballBounds.position.y;
+	const float ballBottom = ballBounds.position.y + ballBounds.size.y;
+
+	const float blockLeft = blockBounds.position.x;
+	const float blockRight = blockBounds.position.x + blockBounds.size.x;
+	const float blockTop = blockBounds.position.y;
+	const float blockBottom = blockBounds.position.y + blockBounds.size.y;
+
+	const float overlapLeft = ballRight - blockLeft;
+	const float overlapRight = blockRight - ballLeft;
+	const float overlapTop = ballBottom - blockTop;
+	const float overlapBottom = blockBottom - ballTop;
+
+	const float minOverlapX = std::min(overlapLeft, overlapRight);
+	const float minOverlapY = std::min(overlapTop, overlapBottom);
+
+	sf::Vector2f position = m_circle.getPosition();
+
+	if (minOverlapX < minOverlapY)
+	{
+		if (overlapLeft < overlapRight)            // Столконовение с левой или правой стеной блока
+		{
+			position.x -= overlapLeft;             // Шар находится слева от блока
+			m_velocity.x = -std::abs(m_velocity.x);
+		}
+		else
+		{
+			position.x += overlapRight;            // Шар находится справа от блока
+			m_velocity.x = std::abs(m_velocity.x);
+		}
+	}
+	else
+	{
+		if (overlapTop < overlapBottom)            // Столконовение с верхней или нижней стеной блока
+		{
+			position.y -= overlapTop;              // Шар находится сверху от блока
+			m_velocity.y = -std::abs(m_velocity.y);
+		}
+		else
+		{
+			position.y += overlapBottom;           // Шар находится снизу от блока
+			m_velocity.y = std::abs(m_velocity.y);
+		}
+	}
+
+	m_circle.setPosition(position);
 }
 
 void Ball::Reset()

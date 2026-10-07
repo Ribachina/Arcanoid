@@ -1,23 +1,30 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
-#include "GameObject.hpp"
+#include "Drawable.hpp"
+#include "Collidable.hpp"
 
-// Разрушаемый блок игры, который реализует интрефейс GameObject
-class Block : public GameObject
+// Базовый класс разрушаемого блока
+class Block : public Drawable, public Collidable
 {
 public:
 	// Создаём блок с позицей и размером
-	Block(sf::Vector2f position, sf::Vector2f size)
-		: m_rectangle(size)
-	{
-		m_rectangle.setPosition(position);
-		m_rectangle.setFillColor(sf::Color::White);
-	}
+	Block(sf::Vector2f position, sf::Vector2f size);
+	virtual ~Block() = default;
+	
 
 	void Draw(sf::RenderWindow& window) const override;
 	sf::FloatRect GetBounds() const override;
 
+	virtual bool OnHit(); // true - мяч отскочил; false - прошёл на сквозь
+	bool IsDestroyed() const;
+
+protected:
+	void SetColor(sf::Color color);
+	void SetOutline(sf::Color color, float thickness);
+	void Destroy();
+
 private:
 	sf::RectangleShape m_rectangle;
+	bool m_destroyed = false;
 };

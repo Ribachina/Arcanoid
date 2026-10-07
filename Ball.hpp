@@ -13,7 +13,7 @@ public:
 	void Launch(); // Запускаем шар с платформы
 	void AttachTo(const sf::FloatRect& platformBounds); // Пока шар не запущен, держим его по центру платформы
 	void BounceFromPlatform(); // Отражает шар после столкновения с платформой
-	void BounceFromBlock();
+	void BounceFromBlock(const sf::FloatRect& blockBounds);
 	void Reset(); // Возвращаем шар в состояние "до запуска" и сбрасываем скорость
 
 	sf::FloatRect GetBounds() const; // Вовращаем глобальные границы шара

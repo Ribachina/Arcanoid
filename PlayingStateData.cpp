@@ -10,12 +10,27 @@ PlayingStateData::PlayingStateData()
 void PlayingStateData::Init()
 {
 	m_blocks.clear();
-	m_blocks.reserve(BLOCK_COUNT);
-	for (int i = 0; i < BLOCK_COUNT; ++i)
+	m_blocks.reserve(BLOCK_COLUMNS * BLOCK_ROWS);
+	for (int rows = 0; rows < BLOCK_ROWS; ++rows)
 	{
-		const float x = BLOCK_START_X + i * BLOCK_STEP_X;
+		for (int columns = 0; columns < BLOCK_COLUMNS; ++columns)
+		{
+			const float x = BLOCK_START_X + columns * BLOCK_STEP_X;
+			const float y = BLOCK_START_Y + rows * BLOCK_STEP_Y;
 
-		m_blocks.push_back(std::make_unique<Block>(sf::Vector2f{ x, BLOCK_START_Y }, BLOCK_SIZE));
+			if ((rows + columns) % 3 == 0)
+			{
+				m_blocks.push_back(std::make_unique<DurableBlock>(sf::Vector2f{ x, y }, BLOCK_SIZE));
+			}
+			else if ((rows + columns) % 2 == 0)
+			{
+				m_blocks.push_back(std::make_unique<GlassBlock>(sf::Vector2f{ x, y }, BLOCK_SIZE));
+			}
+			else
+			{
+				m_blocks.push_back(std::make_unique<Block>(sf::Vector2f{ x, y }, BLOCK_SIZE));
+			}
+		}
 	}
 }
 
@@ -71,8 +86,21 @@ void PlayingStateData::Update(float deltaTime)
 	{
 		if (IsCollision(m_ball.GetBounds(), (*it)->GetBounds()))
 		{
-			m_ball.BounceFromBlock();
-			it = m_blocks.erase(it);
+			const bool shouldBounce = (*it)->OnHit();
+
+			if (shouldBounce)
+			{
+				m_ball.BounceFromBlock((*it)->GetBounds());
+			}
+			
+			if ((*it)->IsDestroyed())
+			{
+				it = m_blocks.erase(it);
+			}
+			else
+			{
+				++it;
+			}
 		}
 		else
 		{
