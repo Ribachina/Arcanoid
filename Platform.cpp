@@ -66,3 +66,35 @@ sf::FloatRect Platform::GetBounds() const
 	return m_rectangle.getGlobalBounds();
 }
 
+sf::Vector2f Platform::GetPosition() const
+{
+	return m_rectangle.getPosition();
+}
+
+void Platform::SetPosition(sf::Vector2f position)
+{
+	m_rectangle.setPosition(position);
+}
+
+sf::Vector2f Platform::GetSize() const
+{
+	return m_rectangle.getSize();
+}
+
+void Platform::SetSize(sf::Vector2f size)
+{
+	m_rectangle.setSize(size);
+}
+
+float Platform::GetSpeed() const
+{
+	return m_speed;
+}
+
+void Platform::SetSpeed(float speed)
+{
+	m_speed = speed;
+}
+
+
+

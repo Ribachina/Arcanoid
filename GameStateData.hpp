@@ -2,7 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "GameStateType.hpp"
 
-// Абстрактный базовый класс для все состояний
+// Абстрактный интерфейс State
 // Определяет общий интерефейс через который работает Game 
 
 class GameStateData

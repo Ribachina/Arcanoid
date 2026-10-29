@@ -14,6 +14,6 @@ public:
 	void Draw(sf::RenderWindow& window) override; // Отрисовка элементов меню
 
 private:
-	sf::Text startGameText;
-	sf::Text hint;
+	sf::Text m_startGameText;
+	sf::Text m_hint;
 };

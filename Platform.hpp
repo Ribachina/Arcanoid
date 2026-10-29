@@ -21,6 +21,15 @@ public:
 
 	sf::FloatRect GetBounds() const; // Вовращаем глобальные границы платформы
 
+	sf::Vector2f GetPosition() const;
+	void SetPosition(sf::Vector2f position);
+
+	sf::Vector2f GetSize() const;
+	void SetSize(sf::Vector2f size);
+
+	float GetSpeed() const;
+	void SetSpeed(float speed);
+
 private:
 	sf::RectangleShape m_rectangle;
 	float m_speed;

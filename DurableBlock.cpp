@@ -24,3 +24,9 @@ bool DurableBlock::OnHit()
 	}
 	return true;
 }
+
+int DurableBlock::GetScoreValue() const
+{
+	return 300;
+}
+

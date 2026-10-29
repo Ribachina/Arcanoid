@@ -18,6 +18,11 @@ public:
 
 	sf::FloatRect GetBounds() const; // Вовращаем глобальные границы шара
 
+	sf::Vector2f GetPosition() const;
+	sf::Vector2f GetVelocity() const;
+	void SetPosition(sf::Vector2f position);
+	void SetVelocity(sf::Vector2f velocity);
+
 private:
 	sf::CircleShape m_circle;
 	sf::Vector2f m_initialVelocity;

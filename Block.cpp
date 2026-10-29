@@ -29,6 +29,11 @@ bool Block::IsDestroyed() const
 	return m_destroyed;
 }
 
+int Block::GetScoreValue() const
+{
+	return 100;
+}
+
 void Block::SetColor(sf::Color color)
 {
 	m_rectangle.setFillColor(color);

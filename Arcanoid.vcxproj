@@ -125,38 +125,62 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Arcanoid.cpp" />
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Block.cpp" />
     <ClCompile Include="Board.cpp" />
+    <ClCompile Include="Bonus.cpp" />
+    <ClCompile Include="BonusFactory.cpp" />
     <ClCompile Include="Collision.cpp" />
     <ClCompile Include="DurableBlock.cpp" />
+    <ClCompile Include="FastPlatformEffect.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameConfig.hpp" />
     <ClCompile Include="GameMain.cpp" />
+    <ClCompile Include="GameMemento.cpp" />
+    <ClCompile Include="GameOverStateData.cpp" />
     <ClCompile Include="GameStateType.hpp" />
-    <ClCompile Include="GlassBlock.cpp" />
+    <ClCompile Include="GlassBlock.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="GlassBlock.hpp" />
+    <ClCompile Include="Leaderboard.cpp" />
+    <ClCompile Include="LifeManager.cpp" />
     <ClCompile Include="MainMenuStateData.cpp" />
     <ClCompile Include="Platform.cpp" />
     <ClCompile Include="PlayingStateData.cpp" />
+    <ClCompile Include="ScoreManager.cpp" />
+    <ClCompile Include="SlowBallEffect.cpp" />
     <ClCompile Include="VictoryStateData.cpp" />
+    <ClCompile Include="WidePlatformEffect.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Arcanoid.hpp" />
     <ClInclude Include="Ball.hpp" />
     <ClInclude Include="Block.hpp" />
     <ClInclude Include="Board.hpp" />
+    <ClInclude Include="Bonus.hpp" />
+    <ClInclude Include="BonusEffect.hpp" />
+    <ClInclude Include="BonusFactory.hpp" />
     <ClInclude Include="Collidable.hpp" />
     <ClInclude Include="Collision.hpp" />
     <ClInclude Include="Drawable.hpp" />
     <ClInclude Include="DurableBlock.hpp" />
+    <ClInclude Include="FastPlatformEffect.hpp" />
     <ClInclude Include="Game.hpp" />
+    <ClInclude Include="GameMemento.hpp" />
+    <ClInclude Include="GameOverStateData.hpp" />
     <ClInclude Include="GameStateData.hpp" />
+    <ClInclude Include="Leaderboard.hpp" />
+    <ClInclude Include="LifeManager.hpp" />
     <ClInclude Include="MainMenuStateData.hpp" />
     <ClInclude Include="Platform.hpp" />
     <ClInclude Include="PlayingStateData.hpp" />
+    <ClInclude Include="ScoreManager.hpp" />
+    <ClInclude Include="ScoreObserver.hpp" />
+    <ClInclude Include="ScoreProvider.hpp" />
+    <ClInclude Include="SlowBallEffect.hpp" />
     <ClInclude Include="VictoryStateData.hpp" />
+    <ClInclude Include="WidePlatformEffect.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

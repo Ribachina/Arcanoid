@@ -5,6 +5,7 @@ Game::Game()
 	: m_window(sf::VideoMode({ GameConfig::WINDOW_WIDTH, GameConfig::WINDOW_HEIGHT }), "Arcanoid"),
 	m_font ("Resources/Fonts/PB Pixel.ttf")
 {
+	m_leaderboard.LoadFromFile();
 	ChangeState(GameStateType::MainMenu);
 }
 
@@ -50,6 +51,13 @@ void Game::Update(float deltaTime)
 	}
 }
 
+void Game::StartNewGame()
+{
+	m_scoreManager.Reset();
+	m_currentState = std::make_unique<PlayingStateData>(m_scoreManager, m_scoreManager, m_font);
+	m_currentState->Init();
+}
+
 void Game::ChangeState(GameStateType type)
 {
 	switch (type)
@@ -59,12 +67,28 @@ void Game::ChangeState(GameStateType type)
 		break;
 	
 	case GameStateType::Playing:
-		m_currentState = std::make_unique < PlayingStateData>();
-		break;
+		StartNewGame();
+		return;
 
 	case GameStateType::Victory:
-		m_currentState = std::make_unique < VictoryStateData>(m_font);
+	{
+		const int score = m_scoreManager.GetScore();
+		m_leaderboard.AddScore(score);
+		m_leaderboard.SaveToFile();
+
+		m_currentState = std::make_unique<VictoryStateData>(m_font, score, m_leaderboard.GetScores());
 		break;
+	}
+
+	case GameStateType::GameOver:
+	{
+		const int score = m_scoreManager.GetScore();
+		m_leaderboard.AddScore(score);
+		m_leaderboard.SaveToFile();
+
+		m_currentState = std::make_unique<GameOverStateData>(m_font, score);
+		break;
+	}
 
 	case GameStateType::None:
 		return;

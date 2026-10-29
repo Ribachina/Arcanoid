@@ -166,3 +166,23 @@ sf::FloatRect Ball::GetBounds() const
 
 	return m_circle.getGlobalBounds();
 }
+
+sf::Vector2f Ball::GetPosition() const
+{
+	return m_circle.getPosition();
+}
+
+sf::Vector2f Ball::GetVelocity() const
+{
+	return m_velocity;
+}
+
+void Ball::SetPosition(sf::Vector2f position)
+{
+	m_circle.setPosition(position);
+}
+
+void Ball::SetVelocity(sf::Vector2f velocity)
+{
+	m_velocity = velocity;
+}

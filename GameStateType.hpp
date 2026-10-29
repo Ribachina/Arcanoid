@@ -8,5 +8,6 @@ enum class GameStateType
 	None,
 	MainMenu,
 	Playing,
-	Victory
+	Victory,
+	GameOver
 };

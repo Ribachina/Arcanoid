@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <string>
 
 // Раньше называли Constant.h Общие параметры игры, которые используются часто и менять их не надо
 namespace GameConfig
@@ -15,4 +16,7 @@ namespace GameConfig
 
 		return (WINDOW_WIDTH - bounds.size.x) / 2.f - bounds.position.x;
 	}
+
+	const std::string LEADERBOARD_FILE = "leaderboard.txt"; // Файл с рекордами
+	const int LIVES = 3;
 }

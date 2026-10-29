@@ -13,6 +13,11 @@ bool GlassBlock::OnHit()
 	return false;
 }
 
+int GlassBlock::GetScoreValue() const
+{
+	return 50;
+}
+
 
 
 

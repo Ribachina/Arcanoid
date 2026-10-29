@@ -1,0 +1,234 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="k6GW124qEfRoIebaflL0">
+    <mxGraphModel dx="1414" dy="751" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-2" edge="1" parent="1" source="sXGLAvp6sEslcXUGc5ul-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="sXGLAvp6sEslcXUGc5ul-7">
+          <mxGeometry relative="1" x="0.29" as="geometry">
+            <mxPoint x="455" y="360" as="sourcePoint" />
+            <mxPoint x="455" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-3" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Банкомат" vertex="1">
+          <mxGeometry height="190" width="160" x="375.5" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-4" parent="sXGLAvp6sEslcXUGc5ul-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- Состояние" vertex="1">
+          <mxGeometry height="26" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-5" parent="sXGLAvp6sEslcXUGc5ul-3" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-6" parent="sXGLAvp6sEslcXUGc5ul-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Установить состояние()" vertex="1">
+          <mxGeometry height="26" width="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-34" parent="sXGLAvp6sEslcXUGc5ul-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Вставить карту()" vertex="1">
+          <mxGeometry height="26" width="160" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-36" parent="sXGLAvp6sEslcXUGc5ul-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Ввести пин-код()" vertex="1">
+          <mxGeometry height="26" width="160" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-35" parent="sXGLAvp6sEslcXUGc5ul-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Выполнить операцию()" vertex="1">
+          <mxGeometry height="26" width="160" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-37" parent="sXGLAvp6sEslcXUGc5ul-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Вернуть карту()" vertex="1">
+          <mxGeometry height="26" width="160" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-7" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&quot;Абстрактный&quot;&lt;br&gt;Состояние банкомата" vertex="1">
+          <mxGeometry height="130" width="191" x="360" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-8" parent="sXGLAvp6sEslcXUGc5ul-7" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Вставить карту()" vertex="1">
+          <mxGeometry height="26" width="191" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-9" parent="sXGLAvp6sEslcXUGc5ul-7" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Ввести пин-код()" vertex="1">
+          <mxGeometry height="26" width="191" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-10" parent="sXGLAvp6sEslcXUGc5ul-7" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Выполнить операцию()" vertex="1">
+          <mxGeometry height="26" width="191" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-15" parent="sXGLAvp6sEslcXUGc5ul-7" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Вернуть карту()&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="26" width="191" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-16" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Карта не вставлена" vertex="1">
+          <mxGeometry height="78" width="191" x="90" y="676" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-17" parent="sXGLAvp6sEslcXUGc5ul-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Вставить карту()" vertex="1">
+          <mxGeometry height="26" width="191" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-18" parent="sXGLAvp6sEslcXUGc5ul-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Ввести пин-код()" vertex="1">
+          <mxGeometry height="26" width="191" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-21" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Карта вставлена" vertex="1">
+          <mxGeometry height="78" width="191" x="370" y="676" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-23" parent="sXGLAvp6sEslcXUGc5ul-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Ввести пин-код()" vertex="1">
+          <mxGeometry height="26" width="191" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-25" parent="sXGLAvp6sEslcXUGc5ul-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Вернуть карту()&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="26" width="191" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-26" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Пользователь авторизован" vertex="1">
+          <mxGeometry height="78" width="191" x="620" y="676" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-29" parent="sXGLAvp6sEslcXUGc5ul-26" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Выполнить операцию()" vertex="1">
+          <mxGeometry height="26" width="191" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-30" parent="sXGLAvp6sEslcXUGc5ul-26" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Вернуть карту()&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="26" width="191" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-31" edge="1" parent="1" source="sXGLAvp6sEslcXUGc5ul-16" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.453;exitY=-0.006;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.123;entryY=1.108;entryDx=0;entryDy=0;entryPerimeter=0;" target="sXGLAvp6sEslcXUGc5ul-15" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="160" y="590" as="sourcePoint" />
+            <mxPoint x="340" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-32" edge="1" parent="1" source="sXGLAvp6sEslcXUGc5ul-21" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.477;exitY=-0.043;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.529;entryY=1.108;entryDx=0;entryDy=0;entryPerimeter=0;" target="sXGLAvp6sEslcXUGc5ul-15" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="370" y="657" as="sourcePoint" />
+            <mxPoint x="566" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-33" edge="1" parent="1" source="sXGLAvp6sEslcXUGc5ul-26" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.913;entryY=1.064;entryDx=0;entryDy=0;entryPerimeter=0;" target="sXGLAvp6sEslcXUGc5ul-15" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="640" y="637" as="sourcePoint" />
+            <mxPoint x="836" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-39" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingBottom=0;spacingTop=-7;" value="&lt;div&gt;&quot;Инициатор&quot;&lt;/div&gt;Холст" vertex="1">
+          <mxGeometry height="150" width="160" x="1190" y="150" as="geometry">
+            <mxRectangle height="40" width="110" x="1190" y="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-40" parent="sXGLAvp6sEslcXUGc5ul-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- Состояние" vertex="1">
+          <mxGeometry height="26" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-41" parent="sXGLAvp6sEslcXUGc5ul-39" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-42" parent="sXGLAvp6sEslcXUGc5ul-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Изменить состояние()" vertex="1">
+          <mxGeometry height="26" width="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-43" parent="sXGLAvp6sEslcXUGc5ul-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Создать снимок()" vertex="1">
+          <mxGeometry height="26" width="160" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-44" parent="sXGLAvp6sEslcXUGc5ul-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Восстановить состояние()" vertex="1">
+          <mxGeometry height="38" width="160" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-98" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 39px;&quot;&gt;СОСТОЯНИЕ&lt;/font&gt;" vertex="1">
+          <mxGeometry height="95" width="360" x="280" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-99" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 39px;&quot;&gt;ХРАНИТЕЛЬ&lt;/font&gt;" vertex="1">
+          <mxGeometry height="95" width="360" x="1090" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-100" edge="1" parent="1" source="sXGLAvp6sEslcXUGc5ul-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="sXGLAvp6sEslcXUGc5ul-101">
+          <mxGeometry relative="1" x="0.2417" as="geometry">
+            <mxPoint x="1269.5" y="310" as="sourcePoint" />
+            <mxPoint x="1269.5" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-101" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;b&gt;&quot;Хранитель&quot;&lt;/b&gt;&lt;/div&gt;&lt;b&gt;Снимок Холста&lt;/b&gt;" vertex="1">
+          <mxGeometry height="52" width="140" x="1200" y="388" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-102" parent="sXGLAvp6sEslcXUGc5ul-101" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- Состояние" vertex="1">
+          <mxGeometry height="26" width="140" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-105" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingBottom=0;spacingTop=-7;" value="&lt;div&gt;&quot;Опекун&quot;&lt;/div&gt;&lt;div&gt;История изменений&lt;/div&gt;" vertex="1">
+          <mxGeometry height="176" width="160" x="1190" y="540" as="geometry">
+            <mxRectangle height="40" width="110" x="1190" y="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-106" parent="sXGLAvp6sEslcXUGc5ul-105" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- История отмены()" vertex="1">
+          <mxGeometry height="26" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-111" parent="sXGLAvp6sEslcXUGc5ul-105" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- История повтора()" vertex="1">
+          <mxGeometry height="26" width="160" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-107" parent="sXGLAvp6sEslcXUGc5ul-105" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-108" parent="sXGLAvp6sEslcXUGc5ul-105" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Сохранить()" vertex="1">
+          <mxGeometry height="26" width="160" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-109" parent="sXGLAvp6sEslcXUGc5ul-105" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Отменить()" vertex="1">
+          <mxGeometry height="26" width="160" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-110" parent="sXGLAvp6sEslcXUGc5ul-105" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Повторить()" vertex="1">
+          <mxGeometry height="38" width="160" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-112" edge="1" parent="1" source="sXGLAvp6sEslcXUGc5ul-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="sXGLAvp6sEslcXUGc5ul-101">
+          <mxGeometry relative="1" x="0.9185" as="geometry">
+            <mxPoint x="1410" y="480" as="sourcePoint" />
+            <mxPoint x="1410" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-113" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 39px;&quot;&gt;ПРОТОТИП&lt;/font&gt;" vertex="1">
+          <mxGeometry height="95" width="360" x="1888" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-114" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;spacingBottom=0;spacingTop=-7;" value="&lt;div&gt;&quot;Абстрактный&quot;&lt;/div&gt;&lt;div&gt;Враг&lt;/div&gt;" vertex="1">
+          <mxGeometry height="138" width="160" x="1988" y="157" as="geometry">
+            <mxRectangle height="40" width="110" x="1190" y="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-115" parent="sXGLAvp6sEslcXUGc5ul-114" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- Здоровье" vertex="1">
+          <mxGeometry height="26" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-120" parent="sXGLAvp6sEslcXUGc5ul-114" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- Скорость" vertex="1">
+          <mxGeometry height="26" width="160" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-128" parent="sXGLAvp6sEslcXUGc5ul-114" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- Урон" vertex="1">
+          <mxGeometry height="26" width="160" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-116" parent="sXGLAvp6sEslcXUGc5ul-114" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-117" parent="sXGLAvp6sEslcXUGc5ul-114" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Клонировать()" vertex="1">
+          <mxGeometry height="26" width="160" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-135" edge="1" parent="1" source="sXGLAvp6sEslcXUGc5ul-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1940" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-130" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;b&gt;Орк&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="52" width="140" x="1870" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-131" parent="sXGLAvp6sEslcXUGc5ul-130" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Клонировать()" vertex="1">
+          <mxGeometry height="26" width="140" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-132" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;b&gt;Скелет&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="52" width="140" x="2160" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-133" parent="sXGLAvp6sEslcXUGc5ul-132" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Клонировать()" vertex="1">
+          <mxGeometry height="26" width="140" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-134" edge="1" parent="1" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.529;entryY=1.108;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" value="">
+          <mxGeometry relative="1" width="160" x="0.6" as="geometry">
+            <mxPoint x="1940" y="400" as="sourcePoint" />
+            <mxPoint x="2067.5" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-136" edge="1" parent="1" source="sXGLAvp6sEslcXUGc5ul-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2229.5" y="440" as="sourcePoint" />
+            <mxPoint x="2229.5" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-137" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" x="0.4824" as="geometry">
+            <mxPoint x="2230" y="400" as="sourcePoint" />
+            <mxPoint x="2060" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-138" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;align=left;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Для банкомата я создал класс &quot;Банкомат&quot;, который хранит текущее состояние через указатель на базовый класс &quot;Состояние банкомата&quot;.&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&quot;Состояние банкомата&quot; содержит виртуальные методы: Вставить карту(), Ввести пин-код(), Выполнить операцию(), Вернуть карту().&lt;br&gt;От него наследуются состояния:&lt;br&gt;Карта не вставлена - карта не вставлена;&lt;br&gt;Карта вставлена - карта вставлена, но пин-код ещё не введён;&lt;br&gt;Пользователь авторизован - пин-код введён правильно, операции разрешены.&lt;br&gt;Класс Банкомат хранит текущее состояние и передаёт ему действия пользователя.&lt;br&gt;Например, если банкомат находится в состоянии &quot;Карта не вставлена&quot;, вызов &quot;Ввести пин-код()&quot; будет отклонён.&lt;br&gt;После вставки карты состояние изменяется:&lt;br&gt;Карта не вставлена -&amp;gt; Карта вставлена -&amp;gt; Пользователь авторизован&lt;br&gt;После извлечения карты банкомат снова переходит в &quot;Карта не вставлена&quot;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="400" width="640" x="150" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-139" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;align=left;" value="&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Для графического редактора я использовал три основных класса.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Холст - Инициатор.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Он содержит текущее состояние холста и умеет:&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;изменять состояние();&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;создавать снимок состояния();&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;восстанавливать состояние().&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Снимок холста - Хранитель.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Он содержит сохранённое &quot;Состояние&quot; холста в определённый момент времени.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;История изменений - Опекун.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Он хранит созданные объекты Снимок холста, в двух контейнерах:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&quot;История отмены()&quot;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&quot;История повтора()&quot;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;При изменении холста создаётся новый снимок:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;При выполнении &quot;Отменить()&quot; опекун берёт предыдущий снимок и передаёт его обратно объекту Холст.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;При выполнении &quot;Повторить()&quot; можно восстановить отменённое состояние.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Таким образом Опекун только хранит снимки и не должен сам изменять внутреннее состояние холста.&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="460" width="640" x="950" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="sXGLAvp6sEslcXUGc5ul-140" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;align=left;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Для врагов я создал базовый класс Враг, который задаёт весь интерфейс, с виртуальным методом &quot;Клонировать()&quot;&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Сначала можно один раз полностью настроить прототип врага: здоровье, скорость, урон.&lt;br&gt;&lt;br&gt;После этого новые враги создаются через &quot;Клонировать()&quot;, а отличающиеся параметры изменяются уже у копии.&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="640" x="1760" y="790" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

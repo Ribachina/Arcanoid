@@ -1,18 +1,18 @@
 #include "MainMenuStateData.hpp"
 
 MainMenuStateData::MainMenuStateData(const sf::Font& font)
-	:startGameText(font, "Start Game", 40),
-	hint(font, "Press Enter to start game", 30)
+	:m_startGameText(font, "Start Game", 40),
+	m_hint(font, "Press Enter to start game", 30)
 {
 }
 
 void MainMenuStateData::Init()
 {
-	startGameText.setPosition(sf::Vector2f{ GameConfig::GetCenteredTextX(startGameText), 280.f });
-	//startGameText.setFillColor(sf::Color::White);
+	m_startGameText.setPosition(sf::Vector2f{ GameConfig::GetCenteredTextX(m_startGameText), 280.f });
+	//m_startGameText.setFillColor(sf::Color::White);
 
-	hint.setPosition(sf::Vector2f{ GameConfig::GetCenteredTextX(hint), 550.f });
-	//hint.setFillColor(sf::Color::White);
+	m_hint.setPosition(sf::Vector2f{ GameConfig::GetCenteredTextX(m_hint), 550.f });
+	//m_hint.setFillColor(sf::Color::White);
 }
 
 void MainMenuStateData::HandleWindowEvent(const sf::Event& event)
@@ -33,6 +33,6 @@ void MainMenuStateData::Update(float deltaTime)
 
 void MainMenuStateData::Draw(sf::RenderWindow& window)
 {
-	window.draw(startGameText);
-	window.draw(hint);
+	window.draw(m_startGameText);
+	window.draw(m_hint);
 }

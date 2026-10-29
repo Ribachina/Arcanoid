@@ -4,7 +4,7 @@
 #include "Drawable.hpp"
 #include "Collidable.hpp"
 
-// Ѕазовый класс разрушаемого блока
+// Ѕазовый класс разрушаемого блока (полиморфный)
 class Block : public Drawable, public Collidable
 {
 public:
@@ -18,6 +18,7 @@ public:
 
 	virtual bool OnHit(); // true - м€ч отскочил; false - прошЄл на сквозь
 	bool IsDestroyed() const;
+	virtual int GetScoreValue() const;
 
 protected:
 	void SetColor(sf::Color color);
